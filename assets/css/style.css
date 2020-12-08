@@ -1,0 +1,111 @@
+.header {
+    /* background-color: black !important; */
+}
+body {
+    background-color: #CCE2FF;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.lession {
+    height: 2000px;
+    border-radius: 15px;
+    margin-top: 12px;
+    background-color: white;
+    box-shadow: 1px 5px 20px 1px rgba(0, 0, 0, 0.15);
+}
+.body-training {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+   
+}
+.training-area {
+    /* background-color: #e0e6f1; */
+    background-color: #CCE2FF;
+    /* box-shadow: 2px 3px 14px black; */
+    padding: 12px
+}
+.text-area {
+    display: flex;
+    justify-content: center;
+}
+
+#type {
+    border: 1px !important ;
+    font-family: "Courier New", Courier, monospace ;
+    border-radius: 4px;
+    width: 90%;
+    height: 130px;
+    overflow: auto;
+    margin-top: 35px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;
+}
+
+.typing {
+    border: 1px !important ;
+    font-family: "Courier New", Courier, monospace ;
+    border-radius: 4px;
+    width: 68.4%;
+    height: 40px;
+    overflow: auto;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;
+    padding-left: 4px;
+    margin-left: 15px;
+}
+.main {
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 1px 5px 20px 1px rgba(0, 0, 0, 0.15);
+    height: 100%;
+    padding: 0px 30px 0px 30px;
+    margin-left: 2px;
+}
+.btn-style {
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
+}
+
+#time-count {
+    width:7%;
+    height:40px; 
+    margin-left: 2px;
+}
+
+#lession-list {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    
+}
+.list-group-item {
+    border-radius: 0px;
+    color: gray;
+}
+.list-group-item.active {
+    
+    background-color: #428bca;
+    border-color: #428bca;
+    color: #fff;
+    border-radius: 0px !important;
+}
+
+.list-group {
+    margin-left: -15px;
+    margin-top: 10px;
+    width: 116%;
+    
+}
+
+small {
+    display: block;
+    margin-left: 23px !important; 
+    margin-top: 3px;
+    
+}
+
+.key-pressed {
+    margin-top: 125px;
+    width: 113%;
+    height: 250px;
+    margin-left: -30px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;
+}
