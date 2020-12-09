@@ -393,6 +393,69 @@ https://templatemo.com/tm-541-host-cloud
           }
       }
     </script>
+     <script>
+      let key = [];
+      let time = 60000;
+      var timeCount;
+      let a = 0
+      //Typing
+      function typing(e) {
+          if (e.code === "Space") {
+              document.querySelector("#typing").value = ""
+              a = a + 1;
+              if (a === 1) {
+                  var x = setInterval(() => {
+                      time = time - 1000;
+                      if (time < 1000) {
+                          time = 0;
+                          clearInterval(x)
+                      }
+                      document.querySelector("#time-count").innerHTML = millisToMinutesAndSeconds(time);
+                  }, 1000)
+              }
+          } else {
+              // Đổi màu
+              if (key.length === 0) {
+                  document.getElementById("key" + e.key).style.backgroundColor = "yellow";
+                  key.push(e.key);
+              }
+              if (e.key !== key[0]) {
+                  document.getElementById("key" + key[0]).style.backgroundColor = "rgb(243, 243, 243)";
+                  key.shift();
+                  document.getElementById("key" + e.key).style.backgroundColor = "yellow";
+                  key.push(e.key)
+              }
+          }
+      }
+
+
+      function millisToMinutesAndSeconds(millis) {
+          var minutes = Math.floor(millis / 60000);
+          var seconds = ((millis % 60000) / 1000).toFixed(0);
+          return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+      }
+
+      function reset(e) {
+          time = 60000;
+      }
+      let stringDemo = "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum"
+      let node = document.createElement("span");
+
+      let textList = stringDemo.split(" ");
+      let i = 0;
+      for (i = 0; i < textList.length; i++) {
+          
+          let node = document.createElement("span");
+          let textnode = document.createTextNode(textList[i]);
+          node.setAttribute("word",i)
+          node.appendChild(textnode) 
+          if( i == 0) {
+             node.style.background = "#dddddd"
+          }
+          document.getElementsByClassName("text-area")[0].appendChild(node)
+      }
+      console.log(document.querySelectorAll("span[word = '1']"))
+  </script>
 
   </body>
 </html>
