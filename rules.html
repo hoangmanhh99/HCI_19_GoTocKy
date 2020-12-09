@@ -137,7 +137,6 @@
   </style>
 
   <title>Học quy tắc gõ</title>
-
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -191,7 +190,7 @@ https://templatemo.com/tm-541-host-cloud
               <a class="nav-link" href="practice.html">Luyện tập</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="gamelogin.html">Trò chơi</a>
+              <a class="nav-link" href="games.html">Trò chơi</a>
             </li>
             </li>
             <li class="nav-item">
@@ -215,7 +214,8 @@ https://templatemo.com/tm-541-host-cloud
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1>HỌC QUY TẮC GÕ</h1>
+          <h1>Học quy tắc gõ</h1>
+          <br>
         </div>
       </div>
     </div>
@@ -244,7 +244,7 @@ https://templatemo.com/tm-541-host-cloud
               <span class="label label-danger" style="font-size: 27px;">TRẠNG THÁI </span>
               <br>
 
-              <button type="button" class="btn btn-danger" style="height: 40%; width: 80%;" id="isHoc1"
+              <button type="button" class="btn btn-warning" style="height: 40%; width: 80%;" id="isHoc1"
                 onclick="ktra(this.id)"> Chưa học </button>
               <br>
             </div>
@@ -265,7 +265,8 @@ https://templatemo.com/tm-541-host-cloud
               <br>
 
               <button type="button" class="btn btn-default"
-                style="background : #FF3333 ; color: white; font-size: 18px ;width: 80%; height: 90%;">
+                style="background : #FF3333 ; color: white; font-size: 18px ;width: 80%; height: 90%;" id="lt1"
+                onclick="ltap(this.id)">
                 LUYỆN TẬP
                 <br>
                 NGAY
@@ -303,7 +304,7 @@ https://templatemo.com/tm-541-host-cloud
               <span class="label label-danger" style="font-size: 27px;">TRẠNG THÁI </span>
               <br>
 
-              <button type="button" class="btn btn-danger" style="height: 40%; width: 80%;" id="isHoc2"
+              <button type="button" class="btn btn-warning" style="height: 40%; width: 80%;" id="isHoc2"
                 onclick="ktra(this.id)"> Chưa học</button>
               <br>
             </div>
@@ -322,7 +323,8 @@ https://templatemo.com/tm-541-host-cloud
               <br>
 
               <button type="button" class="btn btn-default"
-                style="background : #FF3333 ; color: white; font-size: 18px ;width: 80%; height: 90%;">
+                style="background : #FF3333 ; color: white; font-size: 18px ;width: 80%; height: 90%;" id="lt2"
+                onclick="ltap(this.id)">
                 LUYỆN TẬP
                 <br>
                 NGAY
@@ -359,7 +361,7 @@ https://templatemo.com/tm-541-host-cloud
               <span class="label label-danger" style="font-size: 27px;">TRẠNG THÁI </span>
               <br>
 
-              <button type="button" class="btn btn-danger" style="height: 40%; width: 80%;" id="isHoc3"
+              <button type="button" class="btn btn-warning" style="height: 40%; width: 80%;" id="isHoc3"
                 onclick="ktra(this.id)"> Chưa học</button>
               <br>
             </div>
@@ -380,7 +382,8 @@ https://templatemo.com/tm-541-host-cloud
               <br>
 
               <button type="button" class="btn btn-default"
-                style="background : #FF3333 ; color: white; font-size: 18px ;width: 80%; height: 90%;">
+                style="background : #FF3333 ; color: white; font-size: 18px ;width: 80%; height: 90%;" id="lt3"
+                onclick="ltap(this.id)">
                 LUYỆN TẬP
                 <br>
                 NGAY
@@ -416,7 +419,7 @@ https://templatemo.com/tm-541-host-cloud
               <span class="label label-danger" style="font-size: 27px;">TRẠNG THÁI </span>
               <br>
 
-              <button type="button" class="btn btn-danger" style="height: 40%; width: 80%;" id="isHoc4"
+              <button type="button" class="btn btn-warning" style="height: 40%; width: 80%;" id="isHoc4"
                 onclick="ktra(this.id)"> Chưa học</button>
               <br>
             </div>
@@ -437,7 +440,8 @@ https://templatemo.com/tm-541-host-cloud
               <br>
 
               <button type="button" class="btn btn-default"
-                style="background : #FF3333 ; color: white; font-size: 18px ;width: 80%; height: 90%;">
+                style="background : #FF3333 ; color: white; font-size: 18px ;width: 80%; height: 90%;" id="lt4"
+                onclick="ltap(this.id)">
                 LUYỆN TẬP
                 <br>
                 NGAY
@@ -457,9 +461,20 @@ https://templatemo.com/tm-541-host-cloud
 
     </div>
     <br>
-
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
 
     <script>
+      function ltap(id) {
+        document.getElementById(id).addEventListener("click", ltapp(id));
+      }
+      function ltapp(id) {
+        location.href = "practice.html";
+      }
       function ktra(id) {
         var isHoc = 0;
         if (isHoc == 0) {
