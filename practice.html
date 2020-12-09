@@ -22,11 +22,8 @@
     <link rel="stylesheet" href="assets/css/practice.css">
     <link rel="stylesheet" href="assets/css/keyboard.css">
     <!--
-
 Host Cloud Template
-
 https://templatemo.com/tm-541-host-cloud
-
 -->
 </head>
 
@@ -48,7 +45,7 @@ https://templatemo.com/tm-541-host-cloud
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
                     <a class="navbar-brand" href="index.html">
-                        <h2>Tốc <em>Ký</em></h2>
+                        <h2>Tốc Ký</h2>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -102,6 +99,13 @@ https://templatemo.com/tm-541-host-cloud
     </div>
     <!-- Heading Ends Here -->
 
+
+
+
+
+
+
+
     <!-- Body -->
     <div class="body-training">
         <div class="container-fluid row">
@@ -144,18 +148,16 @@ https://templatemo.com/tm-541-host-cloud
                                     <a class="dropdown-item" href="#">Tiếng Anh</a>
                                 </div>
                             </div>
-                            <span style="font-size: 14px; margin: 10px 0px 0px 10px;">Chuyển đổi ngôn ngữ gõ tốc
-                                ký</span>
+                            <span style="font-size: 14px; margin: 10px 0px 0px 10px;">Chuyển đổi ngôn ngữ</span>
                         </div>
                         <span style="display:block; margin: 10px 0px -30px 0px;">Văn bản: </span>
-                        <div class="text-area" id="type">
-                            Lorem <span class='highlight'>ipsum</span> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <div class="text-area row" id="type">
                         </div>
                         <div class="row" style="margin-top: 20px">
-                            <input class="typing" type="text" />
-                            <button class="btn btn-primary btn-style" id="time-count" style="width:10%;" s></button>
-                            <button class="btn btn-primary btn-style"
-                                style="width:7%; height:40px; margin-left: 2px;"><i class="fa fa-undo"></i></button>
+                            <input class="typing" id="typing" type="text" onkeyup="return typing(event)" />
+                            <button class="btn btn-primary btn-style" id="time-count" style="width:10%;">1:00</button>
+                            <button class="btn btn-primary btn-style" style="width:7%; height:40px; margin-left: 2px;"
+                                onclick="return reset(event)"><i class="fa fa-undo"></i></button>
                         </div>
 
                         <!-- Keyboard -->
@@ -222,6 +224,7 @@ https://templatemo.com/tm-541-host-cloud
                             <div class="key">Ctrl</div>
                             <div class="key">Fn</div>
                         </div>
+                        <!-- <button class="btn btn-primary">Kết thúc luyện tập </button> -->
                     </div>
                     <div class="col-md-4">
                         <div id="key-pressed">
@@ -332,40 +335,66 @@ https://templatemo.com/tm-541-host-cloud
     </script>
     <script>
         let key = [];
-
-
-        // Đổi màu
-        document.addEventListener('keypress', (e) => {
-            if (key.length === 0) {
-                document.getElementById("key" + e.key).style.backgroundColor = "yellow";
-                key.push(e.key);
+        let time = 60000;
+        var timeCount;
+        let a = 0
+        //Typing
+        function typing(e) {
+            if (e.code === "Space") {
+                document.querySelector("#typing").value = ""
+                a = a + 1;
+                if (a === 1) {
+                    var x = setInterval(() => {
+                        time = time - 1000;
+                        if (time < 1000) {
+                            time = 0;
+                            clearInterval(x)
+                        }
+                        document.querySelector("#time-count").innerHTML = millisToMinutesAndSeconds(time);
+                    }, 1000)
+                }
+            } else {
+                // Đổi màu
+                if (key.length === 0) {
+                    document.getElementById("key" + e.key).style.backgroundColor = "yellow";
+                    key.push(e.key);
+                }
+                if (e.key !== key[0]) {
+                    document.getElementById("key" + key[0]).style.backgroundColor = "rgb(243, 243, 243)";
+                    key.shift();
+                    document.getElementById("key" + e.key).style.backgroundColor = "yellow";
+                    key.push(e.key)
+                }
             }
-            if (e.key !== key[0]) {
-                document.getElementById("key" + key[0]).style.backgroundColor = "rgb(243, 243, 243)";
-                key.shift();
-                document.getElementById("key" + e.key).style.backgroundColor = "yellow";
-                key.push(e.key)
-            }
-        });
+        }
 
 
-        //Bấm giờ
         function millisToMinutesAndSeconds(millis) {
             var minutes = Math.floor(millis / 60000);
             var seconds = ((millis % 60000) / 1000).toFixed(0);
             return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
         }
-        let time = 60000;
-        var x = setInterval(() => {
 
-            time = time - 1000
-            if (time < 1000) {
-                time = 0;
-                clearInterval(x)
+        function reset(e) {
+            time = 60000;
+        }
+        let stringDemo = "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum"
+        let node = document.createElement("span");
+
+        let textList = stringDemo.split(" ");
+        let i = 0;
+        for (i = 0; i < textList.length; i++) {
+            
+            let node = document.createElement("span");
+            let textnode = document.createTextNode(textList[i]);
+            node.setAttribute("word",i)
+            node.appendChild(textnode) 
+            if( i == 0) {
+               node.style.background = "#dddddd"
             }
-            document.querySelector("#time-count").innerHTML = millisToMinutesAndSeconds(time);
-        }, 1000)
-
+            document.getElementsByClassName("text-area")[0].appendChild(node)
+        }
+        console.log(document.querySelectorAll("span[word = '1']"))
     </script>
 </body>
 
