@@ -49,7 +49,7 @@
   }
   .friendblock {
     display: inline-block;
-    height: 650px;
+    height: 85%;
     background: #f2f3f5b8;
     position: static;
     position: fixed!important;
