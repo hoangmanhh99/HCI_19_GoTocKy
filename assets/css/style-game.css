@@ -139,11 +139,11 @@ input#reset {
     display: table;
     clear: both;
 }
-.text-area p {
+.text-area1 p {
   font-size: 18px;
   /* font-family: 'Roboto'; */
 }
-.text-area {
+.text-area1 {
   display: inline-block;
   width: 90%;
   border: 3px solid white;
