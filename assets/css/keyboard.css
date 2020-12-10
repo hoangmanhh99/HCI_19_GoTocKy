@@ -2,6 +2,7 @@ body * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* .keyboard-base {
@@ -20,21 +21,24 @@ body * {
     grid-gap: 5px;
 
 } */
-.keyboard-base {
-    /* transform: scale(0.8) !important; */
-    margin-top: 100px;
-    max-width: 1085px;
-    padding: 20px;
-    position: absolute;
-    /* top: 16%; */
-    left: 43%;
-    transform: translate(-50%, -50%) scale(0.46);
-    background-color: rgb(197, 197, 197);
-    border-radius: 10px;
-    display: grid;
-    grid-template-columns: repeat(30, 30px);
-    grid-template-rows: repeat(5, 60px);
-    grid-gap: 5px;
+
+.keyboard-base-game {
+
+        /* transform: scale(0.8) !important; */
+        margin-top: 78px;
+        max-width: 1085px;
+        padding: 20px;
+        position: absolute;
+        /* top: 16%; */
+        left: 52%;
+        transform: translate(-50%, -50%) scale(0.46);
+        background-color: rgb(197, 197, 197);
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: repeat(30, 30px);
+        grid-template-rows: repeat(5, 60px);
+        grid-gap: 5px;
+    
 }
 
 .key {

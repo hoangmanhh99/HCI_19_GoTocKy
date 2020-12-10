@@ -17,6 +17,7 @@
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/style-game.css">
+    <link rel="stylesheet" href="assets/css/keyboard.css">
     <link rel="stylesheet" href="assets/css/templatemo-host-cloud.css">
     <link rel="stylesheet" href="assets/css/owl.css">
 <!--
@@ -144,7 +145,7 @@ https://templatemo.com/tm-541-host-cloud
     <!-- https://codepen.io/maxfortoday/pen/wEMLwb -->
                  <!-- friendblock End -->
       <div class="container">
-        <div class="row">
+        <div class="row" style="padding-bottom: 230px;">
           <!-- content -->
           <div class="col-md-9">
             <div id="racetrack">
@@ -153,15 +154,78 @@ https://templatemo.com/tm-541-host-cloud
             </div>
             <!-- <p><a href="index.html">Home</a> / <span>Contact Us</span></p> -->
             <div class="below">
-              <div class="text-area">
+              <div class="text-area1">
                 <p><u>tay xã hội</u> ngữ văn bánh giao nam trả lời phố anh độc lập phương 
                   thanh niên khoa vì cảm ơn ngày thơ phố đợi chi chị</p>
               </div>
               <div class="text-input">
-                <p>tay xã hội </p>
-              </div>
+                <input class="typing-game" id="typing-game" type="text" onkeyup="return typing(event)" />
+                <button class="btn btn-primary btn-style" style="width:7%; height:40px; margin-left: 2px;"
+                onclick="return reset(event)"><i class="fa fa-undo"></i></button>
               <div class="keyboard">
-                <img src="assets/images/keyboard.png" alt="keyboard1" class="keyboard1">
+                <div class="keyboard-base-game">
+                  <div class="key" id="key" onkeypress="myFunction()">~</div>
+                  <div class="key" id="key1">1</div>
+                  <div class="key" id="key2">2</div>
+                  <div class="key" id="key3">3</div>
+                  <div class="key" id="key4">4</div>
+                  <div class="key" id="key5">5</div>
+                  <div class="key" id="key6">6</div>
+                  <div class="key" id="key7">7</div>
+                  <div class="key" id="key8">8</div>
+                  <div class="key" id="key9">9</div>
+                  <div class="key" id="key0">0</div>
+                  <div class="key">-</div>
+                  <div class="key">+</div>
+                  <div class="key delete">Delete</div>
+                  <div class="key tab">Tab</div>
+                  <div class="key" id="keyq">Q</div>
+                  <div class="key" id="keyw">w</div>
+                  <div class="key" id="keye">E</div>
+                  <div class="key" id="keyr">R</div>
+                  <div class="key" id="keyt">T</div>
+                  <div class="key" id="keyy">Y</div>
+                  <div class="key" id="keyu">U</div>
+                  <div class="key" id="keyi">I</div>
+                  <div class="key" id="keyo">O</div>
+                  <div class="key" id="keyp">P</div>
+                  <div class="key">[</div>
+                  <div class="key">]</div>
+                  <div class="key backslash">\</div>
+                  <div class="key capslock">CapsLock</div>
+                  <div class="key" id="keya">A</div>
+                  <div class="key" id="keys">S</div>
+                  <div class="key" id="keyd">D</div>
+                  <div class="key" id="keyf">F</div>
+                  <div class="key" id="keyg">G</div>
+                  <div class="key" id="keyh">H</div>
+                  <div class="key" id="keyj">J</div>
+                  <div class="key" id="keyk">K</div>
+                  <div class="key" id="keyl">L</div>
+                  <div class="key">;</div>
+                  <div class="key">'</div>
+                  <div class="key return">Return</div>
+                  <div class="key leftshift">Shift</div>
+                  <div class="key" id="keyz">Z</div>
+                  <div class="key" id="keyx">X</div>
+                  <div class="key" id="keyc">C</div>
+                  <div class="key" id="keyv">V</div>
+                  <div class="key" id="keyb">B</div>
+                  <div class="key" id="keyn">N</div>
+                  <div class="key" id="keym">M</div>
+                  <div class="key">,</div>
+                  <div class="key">.</div>
+                  <div class="key">/</div>
+                  <div class="key rightshift">Shift</div>
+                  <div class="key leftctrl">Ctrl</div>
+                  <div class="key">Alt</div>
+                  <div class="key command">Command</div>
+                  <div class="key space">Space</div>
+                  <div class="key command">command</div>
+                  <div class="key">Alt</div>
+                  <div class="key">Ctrl</div>
+                  <div class="key">Fn</div>
+              </div>
               </div>
             </div>
           </div>
@@ -174,7 +238,7 @@ https://templatemo.com/tm-541-host-cloud
 
 
     <!-- Contact Us Starts Here -->
-    <div class="contact-us">
+    <!-- <div class="contact-us">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -235,7 +299,7 @@ https://templatemo.com/tm-541-host-cloud
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- Contact Us Ends Here -->
   
 
@@ -330,6 +394,69 @@ https://templatemo.com/tm-541-host-cloud
           }
       }
     </script>
+     <script>
+      let key = [];
+      let time = 60000;
+      var timeCount;
+      let a = 0
+      //Typing
+      function typing(e) {
+          if (e.code === "Space") {
+              document.querySelector("#typing").value = ""
+              a = a + 1;
+              if (a === 1) {
+                  var x = setInterval(() => {
+                      time = time - 1000;
+                      if (time < 1000) {
+                          time = 0;
+                          clearInterval(x)
+                      }
+                      document.querySelector("#time-count").innerHTML = millisToMinutesAndSeconds(time);
+                  }, 1000)
+              }
+          } else {
+              // Đổi màu
+              if (key.length === 0) {
+                  document.getElementById("key" + e.key).style.backgroundColor = "yellow";
+                  key.push(e.key);
+              }
+              if (e.key !== key[0]) {
+                  document.getElementById("key" + key[0]).style.backgroundColor = "rgb(243, 243, 243)";
+                  key.shift();
+                  document.getElementById("key" + e.key).style.backgroundColor = "yellow";
+                  key.push(e.key)
+              }
+          }
+      }
+
+
+      function millisToMinutesAndSeconds(millis) {
+          var minutes = Math.floor(millis / 60000);
+          var seconds = ((millis % 60000) / 1000).toFixed(0);
+          return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+      }
+
+      function reset(e) {
+          time = 60000;
+      }
+      let stringDemo = "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum"
+      let node = document.createElement("span");
+
+      let textList = stringDemo.split(" ");
+      let i = 0;
+      for (i = 0; i < textList.length; i++) {
+          
+          let node = document.createElement("span");
+          let textnode = document.createTextNode(textList[i]);
+          node.setAttribute("word",i)
+          node.appendChild(textnode) 
+          if( i == 0) {
+             node.style.background = "#dddddd"
+          }
+          document.getElementsByClassName("text-area")[0].appendChild(node)
+      }
+      console.log(document.querySelectorAll("span[word = '1']"))
+  </script>
 
   </body>
 </html>
