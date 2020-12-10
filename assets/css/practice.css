@@ -1,9 +1,15 @@
 .header {
     /* background-color: black !important; */
 }
+body {
+    background-color: #e6e6ff;
+    
+}
 .lession {
-    height: 2000px;
-    border-radius: 15px;
+    margin-left: -15px;
+
+    height: 650px;
+    border-radius: 4px;
     margin-top: 12px;
     background-color: white;
     box-shadow: 1px 5px 20px 1px rgba(0, 0, 0, 0.15);
@@ -16,29 +22,29 @@
 }
 .training-area {
     /* background-color: #e0e6f1; */
-    background-color: #CCE2FF;
+    background-color: #e6e6ff;
     /* box-shadow: 2px 3px 14px black; */
     padding: 12px
 }
 .text-area {
+    padding: 14px;
     display: flex;
     justify-content: center;
-}
-
-#type {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    overflow: hidden;
+    font-size: 37px;
+    padding-left: 20px;
     border: 1px !important ;
-    font-family: "Courier New", Courier, monospace ;
     border-radius: 4px;
     width: 90%;
-    height: 130px;
-    overflow: auto;
+    height: 145px;
     margin-top: 35px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;
 }
 
 .typing {
     border: 1px !important ;
-    font-family: "Courier New", Courier, monospace ;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     border-radius: 4px;
     width: 68.4%;
     height: 40px;
@@ -48,10 +54,10 @@
     margin-left: 15px;
 }
 .main {
-    border-radius: 10px;
+    border-radius: 4px;
     background-color: white;
     box-shadow: 1px 5px 20px 1px rgba(0, 0, 0, 0.15);
-    height: 100%;
+    height: 650px;
     padding: 0px 30px 0px 30px;
     margin-left: 2px;
 }
@@ -104,4 +110,9 @@ small {
     height: 250px;
     margin-left: -30px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;
+}
+
+#type > span {
+    padding: 3px 5px 3px 5px;
+    margin: 0px 2px 0px 2px;
 }
