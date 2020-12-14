@@ -17,7 +17,7 @@
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/style-game.css">
-    <link rel="stylesheet" href="assets/css/keyboard.css">
+    <!-- <link rel="stylesheet" href="assets/css/keyboard.css"> -->
     <link rel="stylesheet" href="assets/css/templatemo-host-cloud.css">
     <link rel="stylesheet" href="assets/css/owl.css">
 <!--
@@ -155,7 +155,7 @@ https://templatemo.com/tm-541-host-cloud
              
                 <div class="keyboard">
                   <div class="keyboard-base-game-sh">
-                    <div class="key space-sh" id="key" onkeypress="myFunction()">~</div>
+                    <div class="key-sh space-sh" id="key" onkeypress="myFunction()"></div>
                     
                     <div class="key-sh">S</div>
                     <div class="key-sh" id="keyq">K</div>
@@ -179,12 +179,12 @@ https://templatemo.com/tm-541-host-cloud
                     <div class="key-sh" id="keyj">K</div>
                     <div class="key-sh" id="blank"></div>
                     <div class="key-sh" id="blank"></div>
-                    
+                    <div class="key-sh" id="blank"></div>
                     <div class="key-sh" id="keyU">U</div>
                     <div class="key-sh" id="keyU">O</div>
                     <div class="key-sh" id="keyU">E</div>
                     <div class="key-sh" id="keyU">A</div>
-                    <div class="key-sh" id="keyU">*</div>
+
                    
                   
                 </div>
@@ -195,7 +195,44 @@ https://templatemo.com/tm-541-host-cloud
           <!-- end content -->
        
       
-      
+      <style>
+        .space-sh {
+    grid-column: span 30!important;
+}
+.col2 {
+    grid-row: span 2;
+}
+.key-sh {
+    background-color: rgb(243, 243, 243);
+    border: 2px solid black;
+    border-radius: 5px;
+    grid-column: span 3;
+    font-size: 26px;
+    text-align: center;
+    padding-top: 21px;
+}
+.keyboard-base-game-sh {
+    /* transform: scale(0.8) !important; */
+    margin-top: 78px;
+    max-width: 1085px;
+    padding: 20px;
+    position: absolute;
+    /* top: 16%; */
+    left: 34%;
+    transform: translate(-50%, -50%) scale(0.46);
+    background-color: rgb(197, 197, 197);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(30, 26px);
+    grid-template-rows: repeat(4, 80px);
+    grid-gap: 9px;
+}
+div#blank {
+    background: rgb(197, 197, 197);
+    border: none!important;
+}
+
+      </style>
     
     <!-- Heading Ends Here -->
 
