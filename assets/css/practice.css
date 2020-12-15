@@ -7,8 +7,7 @@ body {
 }
 .lession {
     margin-left: -15px;
-
-    height: 650px;
+    height: 415px;
     border-radius: 4px;
     margin-top: 12px;
     background-color: white;
@@ -29,7 +28,7 @@ body {
 .text-area {
     padding: 14px;
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     overflow: hidden;
     font-size: 37px;
@@ -51,7 +50,7 @@ body {
     overflow: auto;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;
     padding-left: 4px;
-    margin-left: 15px;
+   
 }
 .main {
     border-radius: 4px;
@@ -115,4 +114,65 @@ small {
 #type > span {
     padding: 3px 5px 3px 5px;
     margin: 0px 2px 0px 2px;
+<<<<<<< HEAD
 }
+=======
+}
+.option {
+    margin-left: -20%;
+    margin-top: 28%;
+}
+#key-pressed {
+
+
+    width: 104%;
+    height: 150px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
+    border-radius: 4px;
+
+}
+
+#result {
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 15px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #333333;
+    background: #4d7f9f;
+    border-radius: 5px 5px 0px 0px;
+}
+
+#wpm {
+    display: flex;
+    justify-content: center;
+    color: red;
+    padding: 10px 0px 10px 0px;
+    background-color: #f9f9f9;
+}
+#wpm h2 {
+    font-weight: bold;
+}
+
+#key-pressed > span > h6 {
+    padding: 9px 0px 9px 0px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+#collect-word > h6 {
+    background: #f9f9f9;
+}
+#word-pressed-result, #word-collect-result, #word-wrong-result, #ratio-word-result{
+    float: right;
+    margin-right: 15px;
+    color: red;
+}
+#ratio-word-result {
+    margin-right: 5px!important;
+}
+
+#keyboard-steno img{
+    margin-top: 15%;
+    display: block;
+    max-width: 450px;
+}
+>>>>>>> fcbb0100591c9dbdb6a486a19d240c4c1936985e
