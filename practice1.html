@@ -49,7 +49,7 @@ https://templatemo.com/tm-541-host-cloud
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
                     <a class="navbar-brand" href="index.html">
-                        <h2>Tốc <em>Ký</em></h2>
+                        <h2>Tốc Ký</h2>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -117,12 +117,12 @@ https://templatemo.com/tm-541-host-cloud
                 <p id="lession-list">Danh sách các bài luyện tập</p>
 
                 <div class="list-group">
-                    <a class="list-group-item active" href="#" style="width: 98%"><i class="fa fa-play">
+                    <a class="list-group-item" href="practice.html" style="width: 98%"><i class="fa fa-play">
                         </i>&nbsp;
                         <strong style="font-weight: bold; font-size: 14px;">Luyện tập gõ từ</strong>
                         <small>Top 200 từ</small>
                     </a>
-                    <a class="list-group-item" href="practice1.html"><i class="fa fa-play-circle"></i>&nbsp;
+                    <a class="list-group-item active" href=""><i class="fa fa-play-circle"></i>&nbsp;
                         <strong style="font-weight: bold; font-size: 14px;">Luyện tập gõ câu</strong>
                         <small>Top 200 từ</small>
                     </a>
@@ -384,13 +384,12 @@ https://templatemo.com/tm-541-host-cloud
 
     </script>
     <script>
-        
         let key = [];
         let time = 60000;
         let timeCount;
         let a = 0;
         let wordCount = 0;
-        let word = "";
+        let word = [];
         let resetWord = false;
         //On key down
         function onKeyDown(e) {
@@ -406,9 +405,7 @@ https://templatemo.com/tm-541-host-cloud
         }
         //Typing
         function typing(e) {
-            word = word + e.key;
             if (e.code === "Space") {
-                let now = new Date();
                 document.querySelector("#typing").value = ""
                 a = a + 1;
                 wordCount = wordCount + 1;
@@ -427,18 +424,19 @@ https://templatemo.com/tm-541-host-cloud
                         document.querySelector("#time-count").innerHTML = millisToMinutesAndSeconds(time);
                     }, 1000)
                 }
-                let time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds() 
-                document.getElementById("key-pressed").innerText +=  time + ":    " + word+"\n";
-                word = ""
+
+                document.getElementsByClassName("option").innerText = "ABC"
+
+
             } else {
-                // word.forEach(x => {  
+                // word.forEach(x => {
                 //     document.getElementById("key" + x).style.backgroundColor = "red";
                 //     document.getElementById("key-steno-" + x).style.backgroundColor = "red";
                 // })
                 // resetWord = true;
                 // Đổi màu
                 if (key.length === 0) {
-                        
+                        word = word + e.key;
                         document.getElementById("key" + e.key).style.backgroundColor = "red";
                         document.getElementById("key-steno-" + e.key).style.backgroundColor = "red";
                         key.push(e.key);
@@ -464,8 +462,7 @@ https://templatemo.com/tm-541-host-cloud
         function reset(e) {
             time = 60000;
         }
-        let stringDemo = "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum"
-        let node = document.createElement("span");
+        let stringDemo = "Đỗ Tiến Thành đẹp trai vô địch"
 
         let textList = stringDemo.split(" ");
         let i = 0;
