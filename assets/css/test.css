@@ -1,11 +1,19 @@
 body{
-    margin-top:20px;
+    /* margin-top:20px; */
     color: #1a202c;
     text-align: left;
     background-color: #e2e8f0;    
 }
+.banner-profile {
+    background-image: url(../images/banner-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px 0px;
+    background-position: center center;
+}
 .main-body {
     padding: 15px;
+    margin-top: 100px;
 }
 .card {
     box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
@@ -50,4 +58,24 @@ body{
 }
 .shadow-none {
     box-shadow: none!important;
+}
+.small, small {
+    font-size: 100%;
+    font-weight: 500;
+}
+.rounded-circle {
+    border-radius: 50%!important;
+    height: 150px;
+}
+div#wpm {
+    background: #ffe109!important;
+}
+div#accu {
+    background: #4aea4a!important;
+}
+div#les {
+    background: #f29c00!important;
+}
+div#time {
+    background: lime!important;
 }

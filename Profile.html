@@ -20,13 +20,59 @@
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/templatemo-host-cloud.css">
     <link rel="stylesheet" href="assets/css/owl.css">
-<!--
+    <link rel="stylesheet" href="assets/css/test.css">
 
+<!--
+  
 Host Cloud Template
 
 https://templatemo.com/tm-541-host-cloud
 
 -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+         google.charts.load('current', {'packages':['line']});
+      google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Day');
+      data.addColumn('number', 'Words per minute');
+      // data.addColumn('number', 'The Avengers');
+      // data.addColumn('number', 'Transformers: Age of Extinction');
+
+      data.addRows([
+        [1,  20],
+        [2,  22],
+        [3,  21],
+        [4,  26],
+        [5,  45],
+        [6,  55],
+        [7,  56],
+        [8,  89],
+        [9, 90],
+        [10, 101],
+        [11, 131],
+        [12, 145],
+        [13, 152],
+        [14, 153]
+      ]);
+
+      var options = {
+        chart: {
+          title: 'Tốc độ gõ của bạn trong 2 tuần gần nhất',
+          subtitle: 'Tháng 12'
+        },
+        width: 1000,
+        height: 500
+      };
+
+      var chart = new google.charts.Line(document.getElementById('linechart_material'));
+
+      chart.draw(data, google.charts.Line.convertOptions(options));
+    }
+</script>
   </head>
 
   <body>
@@ -73,24 +119,24 @@ https://templatemo.com/tm-541-host-cloud
         </div>
       </nav>
     </header>
-
+    <div class="banner-profile">
     <div class="container">
         <div class="main-body" >
         
-           
+
         
               <div class="row gutters-sm">
                 <div class="col-md-4 mb-3">
                   <div class="card">
                     <div class="card-body">
                       <div class="d-flex flex-column align-items-center text-center">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                        <img src="./assets/images/team-03.jpg" alt="Admin" class="rounded-circle" width="150">
                         <div class="mt-3">
                           <h4>John Doe</h4>
                           <p class="text-secondary mb-1">Full Stack Developer</p>
                           <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
-                          <button class="btn btn-primary">Follow</button>
-                          <button class="btn btn-outline-primary">Message</button>
+                          <!-- <button class="btn btn-primary">Follow</button>
+                          <button class="btn btn-outline-primary">Message</button> -->
                         </div>
                       </div>
                     </div>
@@ -120,15 +166,15 @@ https://templatemo.com/tm-541-host-cloud
                     </ul> -->
                   </div>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8" style="margin-bottom: 20px;">
                   <div class="card mb-3">
                     <div class="card-body">
                       <div class="row">
                         <div class="col-sm-3">
-                          <h6 class="mb-0">Full Name</h6>
+                          <h6 class="mb-0">Họ và Tên</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                          Kenneth Valdez
+                          John Doe
                         </div>
                       </div>
                       <hr>
@@ -143,7 +189,7 @@ https://templatemo.com/tm-541-host-cloud
                       <hr>
                       <div class="row">
                         <div class="col-sm-3">
-                          <h6 class="mb-0">Phone</h6>
+                          <h6 class="mb-0">Số Điện Thoại</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
                           (239) 816-9029
@@ -161,66 +207,83 @@ https://templatemo.com/tm-541-host-cloud
                       <hr>
                       <div class="row">
                         <div class="col-sm-3">
-                          <h6 class="mb-0">Address</h6>
+                          <h6 class="mb-0">Địa chỉ</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                          Bay Area, San Francisco, CA
+                          Hà Đông, Hà Nội
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div class="card mb-3">
+                    <div class="card-body chart">
+                       <h1>chart Here</h1>
+                    </div>
+                  </div> -->
+                </div> 
+                <div class="col-md-12" >
+                  <div class="row gutters-sm">
+                    <div class="col-sm-12 ">
+                      <div class="card mb-3">
+                        <div class="card-body chart">
+                           <div id="linechart_material" style="width: 900px; height: 500px"></div>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="row gutters-sm">
-                    <div class="col-sm-6 mb-3">
+          
+                    <div class="col-sm-8 mb-3">
                       <div class="card h-100">
                         <div class="card-body">
-                          <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">assignment</i>Project Status</h6>
-                          <small>Web Design</small>
+                          <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Đánh Giá Quá Trình Học</i></h6>
+                          <small>Tốc độ gõ: 152(wpm)</small>
                           <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-primary" id="wpm" role="progressbar" style="width: 60%" aria-valuenow="600" aria-valuemin="0" aria-valuemax="100"></div>
                           </div>
-                          <small>Website Markup</small>
+                          <small>Độ chính xác: 73%</small>
                           <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-primary" role="progressbar" id="accu" style="width: 73%" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100"></div>
                           </div>
-                          <small>One Page</small>
+                          <small>Các bài đã học: 7</small>
                           <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-primary" role="progressbar" id="les" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                           </div>
-                          <small>Mobile Template</small>
+                          <small>Thời gian học: 23h/tuần</small>
                           <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-primary" role="progressbar" id="time" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                           </div>
-                          <small>Backend API</small>
+                          <!-- <small>Backend API</small>
                           <div class="progress mb-3" style="height: 5px">
                             <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
+                          </div> -->
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-6 mb-3">
+                    <div class="col-sm-4 mb-3">
                       <div class="card h-100">
                         <div class="card-body">
-                          <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">assignment</i>Project Status</h6>
-                          <small>Web Design</small>
+                          <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Level</i></h6>
+                          <small>Tốc độ gõ: Good</small>
                           <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-primary" id="wpm" role="progressbar" style="width: 60%" aria-valuenow="600" aria-valuemin="0" aria-valuemax="100"></div>
                           </div>
-                          <small>Website Markup</small>
+                          <small>Độ chính xác: Excellent</small>
                           <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-primary" role="progressbar" id="accu" style="width: 73%" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100"></div>
                           </div>
-                          <small>One Page</small>
+                          <small>Các bài đã học: medium</small>
                           <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-primary" role="progressbar" id="les" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                           </div>
-                          <small>Mobile Template</small>
+                          <small>Thời gian học: Excellent</small>
                           <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-primary" role="progressbar" id="time" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                           </div>
-                          <small>Backend API</small>
+                          <!-- <small>Backend API</small>
                           <div class="progress mb-3" style="height: 5px">
                             <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
+                          </div> -->
                         </div>
                       </div>
                     </div>
@@ -229,6 +292,7 @@ https://templatemo.com/tm-541-host-cloud
               </div>
             </div>
         </div>
+      </div>
     <!-- Footer Starts Here -->
     <footer>
       <div class="container">
