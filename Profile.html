@@ -60,12 +60,12 @@ https://templatemo.com/tm-541-host-cloud
       ]);
 
       var options = {
-        chart: {
-          title: 'Tốc độ gõ của bạn trong 2 tuần gần nhất',
-          subtitle: 'Tháng 12'
-        },
+        // chart: {
+        //   title: 'Tốc độ gõ của bạn trong 2 tuần gần nhất',
+        //   subtitle: 'Tháng 12'
+        // },
         width: 1000,
-        height: 500
+        height: 450
       };
 
       var chart = new google.charts.Line(document.getElementById('linechart_material'));
@@ -225,7 +225,9 @@ https://templatemo.com/tm-541-host-cloud
                   <div class="row gutters-sm">
                     <div class="col-sm-12 ">
                       <div class="card mb-3">
+                
                         <div class="card-body chart">
+                          <h1 style=" font-size: 1.5rem; padding-bottom: 25px;">Tốc độ gõ của bạn trong 2 tuần gần nhất</h1>
                            <div id="linechart_material" style="width: 900px; height: 500px"></div>
                         </div>
                       </div>
