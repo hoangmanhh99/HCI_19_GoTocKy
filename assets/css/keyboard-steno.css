@@ -16,23 +16,23 @@
     padding-top: 21px;
     color: white;
     width: 70px;
-    height: 95px;
+    height: 105px;
 }
 
 .keyboard-base-game-sh {
     /* transform: scale(0.8) !important; */
     margin-top: 78px;
-    max-width: 1085px;
+    max-width: 1055px;
     padding: 20px;
     position: absolute;
-    top: 67%;
+    top: 68.5%;
     left: 40%;
     transform: translate(-50%, -50%) scale(0.4);
-    background-color: rgb(197, 197, 197);
+    background-color:#c8ded9;
     border-radius: 10px;
     display: grid;
     grid-template-columns: repeat(30, 26px);
-    grid-template-rows: repeat(4, 94px);
+    grid-template-rows: repeat(4, 107px);
     grid-gap: 9px;
 }
 
