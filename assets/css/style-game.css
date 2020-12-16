@@ -72,38 +72,10 @@
     font-family: 'Roboto', sans-serif;
 }
 /* end Friend */
-  #racetrack {
-    background: url('https://archive.org/download/chicken-vs-road/chicken-vs-road.jpg') center left repeat-x;
-    height: 330px;
-    border-right: dashed 10px white;
-    box-sizing: border-box; 
-    margin: 40px 0;
-}
-.car {
-    display: block;
-    position: relative;
-    width: 200px;
-    height: 80px;
-}
-#car1 {
-    top: 158px;
-    left: 200px;
-}
-#car2 {
-    top: 150px;
-    left: 130px;
-}
-#raceInfoContainer {
-    width: 80%;
-    margin: 40px auto 0;
-    background: #333;
-    height: 200px;
-}
-#raceInfoContainer h2 {
-    color: white;
-    text-transform: uppercase;
-    border-bottom: solid 1px;
-    padding: 20px;
+img.raceimg {
+  /* width: fit-content!important; */
+  width: 90%;
+  margin-bottom: 40px;
 }
 .raceInfo {
     font-size: 24px;
