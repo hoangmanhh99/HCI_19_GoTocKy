@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/practice.css">
     <link rel="stylesheet" href="assets/css/keyboard.css">
+    <link rel="stylesheet" href="assets/css/keyboard-steno.css">
     <!--
 
 Host Cloud Template
@@ -155,11 +156,17 @@ https://templatemo.com/tm-541-host-cloud
                         <span style="display:block; margin: 10px 0px -30px 0px;">Văn bản: </span>
                         <div class="text-area row" id="type">
                         </div>
-                        <div class="row" style="margin-top: 20px">
-                            <input class="typing" id="typing" type="text" onkeyup="return typing(event)" />
-                            <button class="btn btn-primary btn-style" id="time-count" style="width:10%;">1:00</button>
-                            <button class="btn btn-primary btn-style" style="width:7%; height:40px; margin-left: 2px;"
-                                onclick="return reset(event)"><i class="fa fa-undo"></i></button>
+                        <div class="row" style="margin-top: 20px; display: flex; flex-direction: column;">
+                            <div style="display: flex; justify-content: flex-end; margin-right: 94px;">
+                                <button class="btn btn-primary btn-style" id="time-count" style="width:10%;">1:00</button>
+                                <button class="btn btn-primary btn-style" style="width:7%; height:40px; margin-left: 2px;"
+                                    onclick="return reset(event)"><i class="fa fa-undo"></i>
+                                </button>
+                                </div>
+                            <div>
+                                <textarea class="typing" id="typing" type="text" onkeyup="return typing(event)"></textarea>
+                            </div>
+                            
                         </div>
 
                         <!-- Keyboard -->
@@ -179,40 +186,40 @@ https://templatemo.com/tm-541-host-cloud
                             <div class="key">+</div>
                             <div class="key delete">Delete</div>
                             <div class="key tab">Tab</div>
-                            <div class="key" id="keyq">Q</div>
-                            <div class="key" id="keyw">w</div>
-                            <div class="key" id="keye">E</div>
-                            <div class="key" id="keyr">R</div>
-                            <div class="key" id="keyt">T</div>
-                            <div class="key" id="keyy">Y</div>
-                            <div class="key" id="keyu">U</div>
-                            <div class="key" id="keyi">I</div>
-                            <div class="key" id="keyo">O</div>
-                            <div class="key" id="keyp">P</div>
-                            <div class="key">[</div>
+                            <div class="key" id="keyq" style="background-color: black; color: white;">Q</div>
+                            <div class="key" id="keyw" style="background-color: black; color: white;">w</div>
+                            <div class="key" id="keye" style="background-color: black; color: white;">E</div>
+                            <div class="key" id="keyr" style="background-color: black; color: white;">R</div>
+                            <div class="key" id="keyt" style="background-color: black; color: white;">T</div>
+                            <div class="key" id="">Y</div>
+                            <div class="key" id="keyu" style="background-color: black; color: white;">U</div>
+                            <div class="key" id="keyi" style="background-color: black; color: white;">I</div>
+                            <div class="key" id="keyo" style="background-color: black; color: white;">O</div>
+                            <div class="key" id="keyp" style="background-color: black; color: white;">P</div>
+                            <div class="key" id="key[" style="background-color: black; color: white;">[</div>
                             <div class="key">]</div>
                             <div class="key backslash">\</div>
                             <div class="key capslock">CapsLock</div>
-                            <div class="key" id="keya">A</div>
-                            <div class="key" id="keys">S</div>
-                            <div class="key" id="keyd">D</div>
-                            <div class="key" id="keyf">F</div>
-                            <div class="key" id="keyg">G</div>
-                            <div class="key" id="keyh">H</div>
-                            <div class="key" id="keyj">J</div>
-                            <div class="key" id="keyk">K</div>
-                            <div class="key" id="keyl">L</div>
-                            <div class="key">;</div>
-                            <div class="key">'</div>
+                            <div class="key" id="keya" style="background-color: black; color: white;">A</div>
+                            <div class="key" id="keys" style="background-color: black; color: white;">S</div>
+                            <div class="key" id="keyd" style="background-color: black; color: white;">D</div>
+                            <div class="key" id="keyf" style="background-color: black; color: white;">F</div>
+                            <div class="key" id="keyg" style="background-color: black; color: white;">G</div>
+                            <div class="key" id="">H</div>
+                            <div class="key" id="keyj" style="background-color: black; color: white;">J</div>
+                            <div class="key" id="keyk" style="background-color: black; color: white;">K</div>
+                            <div class="key" id="keyl" style="background-color: black; color: white;">L</div>
+                            <div class="key" id="key;">;</div>
+                            <div class="key" id="key'">'</div>
                             <div class="key return">Return</div>
                             <div class="key leftshift">Shift</div>
-                            <div class="key" id="keyz">Z</div>
-                            <div class="key" id="keyx">X</div>
-                            <div class="key" id="keyc">C</div>
-                            <div class="key" id="keyv">V</div>
-                            <div class="key" id="keyb">B</div>
-                            <div class="key" id="keyn">N</div>
-                            <div class="key" id="keym">M</div>
+                            <div class="key" id="">Z</div>
+                            <div class="key" id="">X</div>
+                            <div class="key" id="keyc" style="background-color: black; color: white;">C</div>
+                            <div class="key" id="keyv" style="background-color: black; color: white;">V</div>
+                            <div class="key" id="">B</div>
+                            <div class="key" id="keyn" style="background-color: black; color: white;">N</div>
+                            <div class="key" id="keym" style="background-color: black; color: white;">M</div>
                             <div class="key">,</div>
                             <div class="key">.</div>
                             <div class="key">/</div>
@@ -233,48 +240,77 @@ https://templatemo.com/tm-541-host-cloud
                             <div>Các từ đã gõ:</div>
                             <div id="key-pressed">
                             </div>
-                            <div id="keyboard-steno">
-                                <img src="steno.png" />
+                            <div class="keyboard">
+                                <div class="keyboard-base-game-sh">
+                                    <div class="key-sh space-sh" id="key" onkeypress="myFunction()" style="width: 97.5%"></div>
+                                    <div class="key-sh" id="key-steno-q" style="background-color: black; color: white;">S</div>
+                                    <div class="key-sh" id="key-steno-w" style="background-color: black; color: white;">K</div>
+                                    <div class="key-sh" id="key-steno-e" style="background-color: black; color: white;">R</div>
+                                    <div class="key-sh" id="key-steno-r" style="background-color: black; color: white;">N</div>
+                                    <div class="key-sh" id="key-steno-t" style="background-color: black; color: white;">H</div>
+                                    <div class="key-sh" id="key-steno-u" style="background-color: black; color: white;">*</div>
+                                    <div class="key-sh" id="key-steno-i" style="background-color: black; color: white;">W</div>
+                                    <div class="key-sh" id="key-steno-o" style="background-color: black; color: white;">J</div>
+                                    <div class="key-sh" id="key-steno-p" style="background-color: black; color: white;">N</div>
+                                    <div class="key-sh" id="key-steno-[" style="background-color: black; color: white;">T</div>
+                                    <div class="key-sh" id="key-steno-a" style="background-color: black; color: white;">T</div>
+                                    <div class="key-sh" id="key-steno-s" style="background-color: black; color: white;">P</div>
+                                    <div class="key-sh" id="key-steno-d" style="background-color: black; color: white;">H</div>
+                                    <div class="key-sh" id="key-steno-f" style="background-color: black; color: white;">N</div>
+                                    <div class="key-sh" id="key-steno-g" style="background-color: black; color: white;">S</div>
+                                    <div class="key-sh" id="key-steno-j" style="background-color: black; color: white;">I</div>
+                                    <div class="key-sh" id="key-steno-k" style="background-color: black; color: white;">Y</div>
+                                    <div class="key-sh" id="key-steno-l" style="background-color: black; color: white;">J</div>
+                                    <div class="key-sh" id="key-steno-;" style="background-color: black; color: white;">G</div>
+                                    <div class="key-sh" id="key-steno-'" style="background-color: black; color: white;">K</div>
+                                    <div class="key-sh" id="blank"></div>
+                                    <div class="key-sh" id="blank"></div>
+                                    <div class="key-sh" id="blank"></div>
+                                    <div class="key-sh" id="key-steno-c"style="background-color: black; color: white;">U</div>
+                                    <div class="key-sh" id="key-steno-v" style="background-color: black; color: white;">O</div>
+                                    <div class="key-sh" id="key-steno-n" style="background-color: black; color: white;">E</div>
+                                    <div class="key-sh" id="key-steno-m" style="background-color: black; color: white;">A</div>
+                                </div>
                             </div>
                         </div>
 
-<!--                        <div id="key-pressed" hidden="true" >-->
-<!--                            <h3 id="result">Kết quả</h3>-->
-<!--                            -->
-<!--                            <span id = "wpm"><h1>0 WPM</h1></span>-->
-<!--                            <hr />-->
-<!--                            <span id=""><h6>Số từ đã gõ <span id="word-pressed-result">0</span></h6></span>-->
-<!--                            <hr />-->
-<!--                            <span id = "collect-word"><h6>Từ gõ đúng<span id="word-collect-result">0</span></h6></span>-->
-<!--                            <hr />-->
-<!--                            <span id = "wrong-word"><h6>Từ gõ sai<span id="word-wrong-result">0</span></h6></span>-->
-<!--                            <hr />-->
-<!--                            <span id = "ratio-word"><h6>Tỉ lệ gõ chính xác<span id="ratio-word-result">0%</span></h6></span>-->
-<!--                            <hr />-->
-<!--                            &lt;!&ndash; <tbody>-->
-<!--                                <tr>-->
-<!--                                    <td>-->
-<!--                                        5 WPM-->
-<!--                                    </td>-->
-<!--                                </tr>-->
-<!--                                <tr>-->
-<!--                                    <td>-->
-<!--                                        Số từ đã gõ-->
-<!--                                    </td>-->
-<!--                                    -->
-<!--                                </tr>-->
-<!--                                <tr>-->
-<!--                                    <td>-->
-<!--                                        Số từ gõ đúng-->
-<!--                                    </td>-->
-<!--                                </tr>-->
-<!--                                <tr>-->
-<!--                                    <td>-->
-<!--                                        Số từ gõ sai-->
-<!--                                    </td>-->
-<!--                                </tr>-->
-<!--                            </tbody> &ndash;&gt;-->
-<!--                        </div>-->
+                        <!--                        <div id="key-pressed" hidden="true" >-->
+                        <!--                            <h3 id="result">Kết quả</h3>-->
+                        <!--                            -->
+                        <!--                            <span id = "wpm"><h1>0 WPM</h1></span>-->
+                        <!--                            <hr />-->
+                        <!--                            <span id=""><h6>Số từ đã gõ <span id="word-pressed-result">0</span></h6></span>-->
+                        <!--                            <hr />-->
+                        <!--                            <span id = "collect-word"><h6>Từ gõ đúng<span id="word-collect-result">0</span></h6></span>-->
+                        <!--                            <hr />-->
+                        <!--                            <span id = "wrong-word"><h6>Từ gõ sai<span id="word-wrong-result">0</span></h6></span>-->
+                        <!--                            <hr />-->
+                        <!--                            <span id = "ratio-word"><h6>Tỉ lệ gõ chính xác<span id="ratio-word-result">0%</span></h6></span>-->
+                        <!--                            <hr />-->
+                        <!--                            &lt;!&ndash; <tbody>-->
+                        <!--                                <tr>-->
+                        <!--                                    <td>-->
+                        <!--                                        5 WPM-->
+                        <!--                                    </td>-->
+                        <!--                                </tr>-->
+                        <!--                                <tr>-->
+                        <!--                                    <td>-->
+                        <!--                                        Số từ đã gõ-->
+                        <!--                                    </td>-->
+                        <!--                                    -->
+                        <!--                                </tr>-->
+                        <!--                                <tr>-->
+                        <!--                                    <td>-->
+                        <!--                                        Số từ gõ đúng-->
+                        <!--                                    </td>-->
+                        <!--                                </tr>-->
+                        <!--                                <tr>-->
+                        <!--                                    <td>-->
+                        <!--                                        Số từ gõ sai-->
+                        <!--                                    </td>-->
+                        <!--                                </tr>-->
+                        <!--                            </tbody> &ndash;&gt;-->
+                        <!--                        </div>-->
                     </div>
                 </div>
             </div>
@@ -291,7 +327,7 @@ https://templatemo.com/tm-541-host-cloud
     <!-- Footer Starts Here -->
     <footer>
         <div class="container">
-        </div> 
+        </div>
     </footer>
     <!-- Footer Ends Here -->
 
@@ -329,7 +365,7 @@ https://templatemo.com/tm-541-host-cloud
                 document.querySelector("#typing").value = ""
                 a = a + 1;
                 wordCount = wordCount + 1;
-                let beforeWord = document.querySelector(`span[word = '${wordCount-1}']`);
+                let beforeWord = document.querySelector(`span[word = '${wordCount - 1}']`);
                 let currentWord = document.querySelector(`span[word = '${wordCount}']`);
                 currentWord.style.background = "rgb(221, 221, 221)";
                 beforeWord.style.background = "";
@@ -349,13 +385,17 @@ https://templatemo.com/tm-541-host-cloud
                 // Đổi màu
                 if (key.length === 0) {
                     word = word + e.key;
-                    document.getElementById("key" + e.key).style.backgroundColor = "yellow";
+                    document.getElementById("key" + e.key).style.backgroundColor = "red";
+                    document.getElementById("key-steno-" + e.key).style.backgroundColor = "red";
                     key.push(e.key);
                 }
                 if (e.key !== key[0]) {
-                    document.getElementById("key" + key[0]).style.backgroundColor = "rgb(243, 243, 243)";
+                    console.log(key[0])
+                    document.getElementById("key" + key[0]).style.backgroundColor = "black";
+                    document.getElementById("key-steno-" + key[0]).style.backgroundColor = "black";
                     key.shift();
-                    document.getElementById("key" + e.key).style.backgroundColor = "yellow";
+                    document.getElementById("key" + e.key).style.backgroundColor = "red";
+                    document.getElementById("key-steno-" + e.key).style.backgroundColor = "red";
                     key.push(e.key)
                 }
             }
