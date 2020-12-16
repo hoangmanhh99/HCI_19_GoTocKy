@@ -1,0 +1,39 @@
+.space-sh {
+    grid-column: span 30 !important;
+}
+
+.col2 {
+    grid-row: span 2;
+}
+
+.keyboard-base-game-sh .key-sh {
+    background-color: rgb(243, 243, 243);
+    border: 2px solid black;
+    border-radius: 5px;
+    grid-column: span 3;
+    font-size: 26px;
+    text-align: center;
+    padding-top: 21px;
+}
+
+.keyboard-base-game-sh {
+    /* transform: scale(0.8) !important; */
+    margin-top: 78px;
+    max-width: 1085px;
+    padding: 20px;
+    position: absolute;
+    top: 65%;
+    left: 40%;
+    transform: translate(-50%, -50%) scale(0.4);
+    background-color: rgb(197, 197, 197);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(30, 26px);
+    grid-template-rows: repeat(4, 80px);
+    grid-gap: 9px;
+}
+
+div#blank {
+    /* background: rgb(197, 197, 197);
+    border: none !important; */
+}
