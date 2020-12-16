@@ -108,4 +108,13 @@ div#blank {
   background: #2bbd52;
 }
 
+.key-base {
+  margin-right: 40px;
+  color: yellow;
+}
+
+.key-base-parent {
+  padding-top: 0px !important;
+}
+
 
