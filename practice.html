@@ -158,35 +158,38 @@ https://templatemo.com/tm-541-host-cloud
                         </div>
                         <div class="row" style="margin-top: 20px; display: flex; flex-direction: column;">
                             <div style="display: flex; justify-content: flex-end; margin-right: 94px;">
-                                <button class="btn btn-primary btn-style" id="time-count" style="width:10%;">1:00</button>
-                                <button class="btn btn-primary btn-style" style="width:7%; height:40px; margin-left: 2px;"
-                                    onclick="return reset(event)"><i class="fa fa-undo"></i>
+                                <button class="btn btn-primary btn-style" id="time-count"
+                                    style="width:10%;">1:00</button>
+                                <button class="btn btn-primary btn-style"
+                                    style="width:7%; height:40px; margin-left: 2px;" onclick="return reset(event)"><i
+                                        class="fa fa-undo"></i>
                                 </button>
-                                </div>
-                            <div>
-                                <textarea class="typing" id="typing" type="text" onkeyup="return typing(event)"></textarea>
                             </div>
-                            
+                            <div>
+                                <textarea class="typing" id="typing" type="text"
+                                    onkeyup="return typing(event)"></textarea>
+                            </div>
+
                         </div>
 
                         <!-- Keyboard -->
                         <div class="keyboard-base">
                             <div class="key" id="key" onkeypress="myFunction()">~</div>
-                            <div class="key" id="key1">1</div>
-                            <div class="key" id="key2">2</div>
-                            <div class="key" id="key3">3</div>
-                            <div class="key" id="key4">4</div>
-                            <div class="key" id="key5">5</div>
-                            <div class="key" id="key6">6</div>
-                            <div class="key" id="key7">7</div>
-                            <div class="key" id="key8">8</div>
-                            <div class="key" id="key9">9</div>
-                            <div class="key" id="key0">0</div>
+                            <div class="key keyhighlight" id="key1">1</div>
+                            <div class="key keyhighlight" id="key2">2</div>
+                            <div class="key keyhighlight" id="key3">3</div>
+                            <div class="key keyhighlight" id="key4">4</div>
+                            <div class="key keyhighlight" id="key5">5</div>
+                            <div class="key keyhighlight" id="key6">6</div>
+                            <div class="key keyhighlight" id="key7">7</div>
+                            <div class="key keyhighlight" id="key8">8</div>
+                            <div class="key keyhighlight" id="key9">9</div>
+                            <div class="key keyhighlight" id="key0">0</div>
                             <div class="key">-</div>
                             <div class="key">+</div>
                             <div class="key delete">Delete</div>
                             <div class="key tab">Tab</div>
-                            <div class="key" id="keyq" style="background-color: black; color: white;">Q</div>
+                            <div class="key" id="keyq" style="background-color: black; color: white;">Q<div></div></div>
                             <div class="key" id="keyw" style="background-color: black; color: white;">w</div>
                             <div class="key" id="keye" style="background-color: black; color: white;">E</div>
                             <div class="key" id="keyr" style="background-color: black; color: white;">R</div>
@@ -212,7 +215,7 @@ https://templatemo.com/tm-541-host-cloud
                             <div class="key" id="key;">;</div>
                             <div class="key" id="key'">'</div>
                             <div class="key return">Return</div>
-                            <div class="key leftshift">Shift</div>
+                            <div class="key leftshift" id= "keyShift">Shift</div>
                             <div class="key" id="">Z</div>
                             <div class="key" id="">X</div>
                             <div class="key" id="keyc" style="background-color: black; color: white;">C</div>
@@ -223,14 +226,14 @@ https://templatemo.com/tm-541-host-cloud
                             <div class="key">,</div>
                             <div class="key">.</div>
                             <div class="key">/</div>
-                            <div class="key rightshift">Shift</div>
-                            <div class="key leftctrl">Ctrl</div>
+                            <div class="key rightshift" id= "keyShift">Shift</div>
+                            <div class="key leftctrl" id="keyControl">Ctrl</div>
                             <div class="key">Alt</div>
                             <div class="key command">Command</div>
                             <div class="key space">Space</div>
                             <div class="key command">command</div>
                             <div class="key">Alt</div>
-                            <div class="key">Ctrl</div>
+                            <div class="key rightctrl" id="keyControl">Ctrl</div>
                             <div class="key">Fn</div>
                         </div>
                         <!-- <button class="btn btn-primary">Kết thúc luyện tập </button> -->
@@ -242,34 +245,61 @@ https://templatemo.com/tm-541-host-cloud
                             </div>
                             <div class="keyboard">
                                 <div class="keyboard-base-game-sh">
-                                    <div class="key-sh space-sh" id="key" onkeypress="myFunction()" style="width: 97.5%"></div>
-                                    <div class="key-sh" id="key-steno-q" style="background-color: black; color: white;">S</div>
-                                    <div class="key-sh" id="key-steno-w" style="background-color: black; color: white;">K</div>
-                                    <div class="key-sh" id="key-steno-e" style="background-color: black; color: white;">R</div>
-                                    <div class="key-sh" id="key-steno-r" style="background-color: black; color: white;">N</div>
-                                    <div class="key-sh" id="key-steno-t" style="background-color: black; color: white;">H</div>
-                                    <div class="key-sh" id="key-steno-u" style="background-color: black; color: white;">*</div>
-                                    <div class="key-sh" id="key-steno-i" style="background-color: black; color: white;">W</div>
-                                    <div class="key-sh" id="key-steno-o" style="background-color: black; color: white;">J</div>
-                                    <div class="key-sh" id="key-steno-p" style="background-color: black; color: white;">N</div>
-                                    <div class="key-sh" id="key-steno-[" style="background-color: black; color: white;">T</div>
-                                    <div class="key-sh" id="key-steno-a" style="background-color: black; color: white;">T</div>
-                                    <div class="key-sh" id="key-steno-s" style="background-color: black; color: white;">P</div>
-                                    <div class="key-sh" id="key-steno-d" style="background-color: black; color: white;">H</div>
-                                    <div class="key-sh" id="key-steno-f" style="background-color: black; color: white;">N</div>
-                                    <div class="key-sh" id="key-steno-g" style="background-color: black; color: white;">S</div>
-                                    <div class="key-sh" id="key-steno-j" style="background-color: black; color: white;">I</div>
-                                    <div class="key-sh" id="key-steno-k" style="background-color: black; color: white;">Y</div>
-                                    <div class="key-sh" id="key-steno-l" style="background-color: black; color: white;">J</div>
-                                    <div class="key-sh" id="key-steno-;" style="background-color: black; color: white;">G</div>
-                                    <div class="key-sh" id="key-steno-'" style="background-color: black; color: white;">K</div>
+                                    <div class="key-sh space-sh" id="key" onkeypress="myFunction()"
+                                        style="width: 97.5%; background: #2bbd52;"></div>
+                                    <div class="key-sh" id="key-steno-q" style="background-color: black; color: white;">
+                                        S
+                                
+                                    </div>
+                                    <div class="key-sh" id="key-steno-w" style="background-color: black; color: white;">
+                                        K</div>
+                                    <div class="key-sh" id="key-steno-e" style="background-color: black; color: white;">
+                                        R</div>
+                                    <div class="key-sh" id="key-steno-r" style="background-color: black; color: white;">
+                                        N</div>
+                                    <div class="key-sh" id="key-steno-t" style="background-color: black; color: white;">
+                                        H</div>
+                                    <div class="key-sh" id="key-steno-u" style="background-color: black; color: white;">
+                                        *</div>
+                                    <div class="key-sh" id="key-steno-i" style="background-color: black; color: white;">
+                                        W</div>
+                                    <div class="key-sh" id="key-steno-o" style="background-color: black; color: white;">
+                                        J</div>
+                                    <div class="key-sh" id="key-steno-p" style="background-color: black; color: white;">
+                                        N</div>
+                                    <div class="key-sh" id="key-steno-[" style="background-color: black; color: white;">
+                                        T</div>
+                                    <div class="key-sh" id="key-steno-a" style="background-color: black; color: white;">
+                                        T</div>
+                                    <div class="key-sh" id="key-steno-s" style="background-color: black; color: white;">
+                                        P</div>
+                                    <div class="key-sh" id="key-steno-d" style="background-color: black; color: white;">
+                                        H</div>
+                                    <div class="key-sh" id="key-steno-f" style="background-color: black; color: white;">
+                                        N</div>
+                                    <div class="key-sh" id="key-steno-g" style="background-color: black; color: white;">
+                                        S</div>
+                                    <div class="key-sh" id="key-steno-j" style="background-color: black; color: white;">
+                                        I</div>
+                                    <div class="key-sh" id="key-steno-k" style="background-color: black; color: white;">
+                                        Y</div>
+                                    <div class="key-sh" id="key-steno-l" style="background-color: black; color: white;">
+                                        J</div>
+                                    <div class="key-sh" id="key-steno-;" style="background-color: black; color: white;">
+                                        G</div>
+                                    <div class="key-sh" id="key-steno-'" style="background-color: black; color: white;">
+                                        K</div>
                                     <div class="key-sh" id="blank"></div>
                                     <div class="key-sh" id="blank"></div>
                                     <div class="key-sh" id="blank"></div>
-                                    <div class="key-sh" id="key-steno-c"style="background-color: black; color: white;">U</div>
-                                    <div class="key-sh" id="key-steno-v" style="background-color: black; color: white;">O</div>
-                                    <div class="key-sh" id="key-steno-n" style="background-color: black; color: white;">E</div>
-                                    <div class="key-sh" id="key-steno-m" style="background-color: black; color: white;">A</div>
+                                    <div class="key-sh" id="key-steno-c" style="background-color: black; color: white;">
+                                        U</div>
+                                    <div class="key-sh" id="key-steno-v" style="background-color: black; color: white;">
+                                        O</div>
+                                    <div class="key-sh" id="key-steno-n" style="background-color: black; color: white;">
+                                        E</div>
+                                    <div class="key-sh" id="key-steno-m" style="background-color: black; color: white;">
+                                        A</div>
                                 </div>
                             </div>
                         </div>
@@ -384,10 +414,18 @@ https://templatemo.com/tm-541-host-cloud
             } else {
                 // Đổi màu
                 if (key.length === 0) {
-                    word = word + e.key;
-                    document.getElementById("key" + e.key).style.backgroundColor = "red";
-                    document.getElementById("key-steno-" + e.key).style.backgroundColor = "red";
-                    key.push(e.key);
+
+                    if (e.key == "Control" || e.key == "Shift") {
+                        document.querySelectorAll("#key" + e.key ).forEach(x => {
+                            x.style.backgroundColor = "red"
+                        })
+                    } else {
+                        word = word + e.key;
+                        document.getElementById("key" + e.key).style.backgroundColor = "red";
+                        document.getElementById("key-steno-" + e.key).style.backgroundColor = "red";
+                        key.push(e.key);
+                    }
+
                 }
                 if (e.key !== key[0]) {
                     console.log(key[0])

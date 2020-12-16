@@ -13,7 +13,7 @@ body * {
     top: 65%;
     left: 43%;
     transform: translate(-50%, -50%) scale(0.5);
-    background-color: rgb(197, 197, 197);
+    background-color: #c8ded9;
     border-radius: 10px;
     display: grid;
     grid-template-columns: repeat(30, 30px);
@@ -29,7 +29,7 @@ body * {
   font-size: 20px;
   text-align: center;
   padding-top: 17px;
-  /* color: white; */
+  font-weight: bold;
 }
 
 .key:hover {
@@ -94,7 +94,7 @@ body * {
 }
 
 div#blank {
-    background: rgb(197, 197, 197);
+    background: #c8ded9;
     border: none!important;
 }
 
@@ -102,6 +102,10 @@ div#blank {
   .keyboard-base {
     transform: translate(-50%, -50%) scale(0.55);
   }
+}
+
+.leftctrl , .rightctrl, .leftshift, .rightshift, .keyhighlight {
+  background: #2bbd52;
 }
 
 
