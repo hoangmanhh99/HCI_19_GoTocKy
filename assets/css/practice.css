@@ -47,7 +47,7 @@ body {
     margin-top: 10px;
     border-radius: 4px;
     width: 86%;
-    height: 150px;
+    height: 208px;
     overflow: auto;
     /* box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important; */
     padding-left: 4px;
@@ -103,7 +103,9 @@ small {
     margin-top: 3px;
     
 }
-
+.page-heading {
+    padding-top: 100px !important;  
+}
 .key-pressed {
     margin-top: 125px;
     width: 113%;
@@ -118,10 +120,10 @@ small {
 }
 .option {
     margin-left: -20%;
-    margin-top: 34%;
+    margin-top: 28%;
 }
-#key-pressed {
-
+#key-pressed {  
+    overflow: auto;
     margin-left: -20px;
     width: 110%;
     height: 268px;
@@ -129,7 +131,6 @@ small {
     border-radius: 4px;
 
 }
-
 #result {
     color: #fff;
     font-size: 16px;
@@ -156,10 +157,10 @@ small {
     font-size: 16px;
     margin-left: 10px;
 }
-#collect-word > h6 {
+#correct-word > h6 {
     background: #f9f9f9;
 }
-#word-pressed-result, #word-collect-result, #word-wrong-result, #ratio-word-result{
+#word-pressed-result, #word-correct-result, #word-wrong-result, #ratio-word-result{
     float: right;
     margin-right: 15px;
     color: red;

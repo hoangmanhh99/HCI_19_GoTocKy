@@ -20,6 +20,22 @@ body * {
     grid-template-rows: repeat(5, 60px);
     grid-gap: 5px;
 }
+.keyboard-base-game {
+  /* transform: scale(0.8) !important; */
+  margin-top: 100px;
+  max-width: 1085px;
+  padding: 20px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  background-color: #c8ded9;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(30, 30px);
+  grid-template-rows: repeat(5, 60px);
+  grid-gap: 5px;
+}
 
 .key {
   background-color: rgb(243, 243, 243);
@@ -100,7 +116,7 @@ div#blank {
 
 @media screen and (min-width: 1340px) {
   .keyboard-base {
-    transform: translate(-50%, -50%) scale(0.55);
+    transform: translate(-50%, -50%) scale(0.6);
   }
 }
 

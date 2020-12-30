@@ -9,7 +9,7 @@
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <script src="jsHelper.js"></script>
     <title>Tốc ký</title>
 
     <!-- Bootstrap core CSS -->
@@ -94,7 +94,7 @@ https://templatemo.com/tm-541-host-cloud
     <div class="page-heading header-text">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 hahaha">
                     <h1>Luyện tập</h1>
                     <p><a href="index.html">Home</a> / <span>Luyện tập</span></p>
                 </div>
@@ -126,8 +126,8 @@ https://templatemo.com/tm-541-host-cloud
                         <strong style="font-weight: bold; font-size: 14px;">Luyện tập gõ câu</strong>
                         <small>Top 200 từ</small>
                     </a>
-                    <a class="list-group-item" href="#"><i class="fa fa-forward"></i>&nbsp;
-                        <strong style="font-weight: bold; font-size: 14px;">Luyện tập gõ từ tiếng Viêt nâng cao</strong>
+                    <a class="list-group-item" href="practice2.html"><i class="fa fa-forward"></i>&nbsp;
+                        <strong style="font-weight: bold; font-size: 14px;">Soạn thảo văn bản</strong>
                         <small>Top 1000 từ</small>
                     </a>
                     <a class="list-group-item" href="#"><i class="fa fa-forward"></i>&nbsp;
@@ -141,23 +141,11 @@ https://templatemo.com/tm-541-host-cloud
             <div class="col-sm-10 training-area">
                 <div class="main row">
                     <div class="col-md-8">
-                        <div style="margin-left:-2px; display: inline;">
-                            <div class="dropdown">
-                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Tiếng việt
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Tiếng Anh</a>
-                                </div>
-                            </div>
-                            <span style="font-size: 14px; margin: 10px 0px 0px 10px;">Chuyển đổi ngôn ngữ</span>
-                        </div>
                         <span style="display:block; margin: 10px 0px -30px 0px;">Văn bản: </span>
                         <div class="text-area row" id="type">
                         </div>
                         <div class="row" style="margin-top: 20px; display: flex; flex-direction: column;">
-                            <div style="display: flex; justify-content: flex-end; margin-right: 94px;">
+                            <div style="display: flex; justify-content: flex-end; margin-right: 103px;">
                                 <button class="btn btn-primary btn-style" id="time-count"
                                     style="width:10%;">1:00</button>
                                 <button class="btn btn-primary btn-style"
@@ -166,7 +154,7 @@ https://templatemo.com/tm-541-host-cloud
                                 </button>
                             </div>
                             <div>
-                                <textarea class="typing" id="typing" type="text" onkeydown="return onKeyDown(event)"
+                                <textarea class="typing" id="typing" type="text" style="height: 240px; overflow: auto;" onkeydown="return onKeyDown(event)"
                                     onkeyup="return typing(event)"></textarea>
                             </div>
 
@@ -240,9 +228,9 @@ https://templatemo.com/tm-541-host-cloud
                         <!-- <button class="btn btn-primary">Kết thúc luyện tập </button> -->
                     </div>
                     <div class="col-md-4">
-                        <div class="option">
+                        <div class="option" style="margin-top: 4%;">
                             <div>Các từ đã gõ:</div>
-                            <div id="key-pressed">
+                            <div id="key-pressed" style="height: 360px;">
                             </div>
                             <div class="keyboard">
                                 <div class="keyboard-base-game-sh">
@@ -384,86 +372,7 @@ https://templatemo.com/tm-541-host-cloud
 
     </script>
     <script>
-        let key = [];
-        let time = 60000;
-        let timeCount;
-        let a = 0;
-        let wordCount = 0;
-        let word = [];
-        let resetWord = false;
-        //On key down
-        function onKeyDown(e) {
-            // if(resetWord) {
-            //     word.forEach(x => {
-            //         document.getElementById("key" + x).style.backgroundColor = "black";
-            //         document.getElementById("key-steno-" + x).style.backgroundColor = "black";
-            //     })
-            //     word = [];
-            //     resetWord = false;
-            // }
-            // word.push(e.key);
-        }
-        //Typing
-        function typing(e) {
-            if (e.code === "Space") {
-                document.querySelector("#typing").value = ""
-                a = a + 1;
-                wordCount = wordCount + 1;
-                let beforeWord = document.querySelector(`span[word = '${wordCount - 1}']`);
-                let currentWord = document.querySelector(`span[word = '${wordCount}']`);
-                currentWord.style.background = "rgb(221, 221, 221)";
-                beforeWord.style.background = "";
-
-                if (a === 1) {
-                    var x = setInterval(() => {
-                        time = time - 1000;
-                        if (time < 1000) {
-                            time = 0;
-                            clearInterval(x)
-                        }
-                        document.querySelector("#time-count").innerHTML = millisToMinutesAndSeconds(time);
-                    }, 1000)
-                }
-
-                document.getElementsByClassName("option").innerText = "ABC"
-
-
-            } else {
-                // word.forEach(x => {
-                //     document.getElementById("key" + x).style.backgroundColor = "red";
-                //     document.getElementById("key-steno-" + x).style.backgroundColor = "red";
-                // })
-                // resetWord = true;
-                // Đổi màu
-                if (key.length === 0) {
-                        word = word + e.key;
-                        document.getElementById("key" + e.key).style.backgroundColor = "red";
-                        document.getElementById("key-steno-" + e.key).style.backgroundColor = "red";
-                        key.push(e.key);
-                }
-                if (e.key !== key[0]) {
-                    document.getElementById("key" + key[0]).style.backgroundColor = "black";
-                    document.getElementById("key-steno-" + key[0]).style.backgroundColor = "black";
-                    key.shift();
-                    document.getElementById("key" + e.key).style.backgroundColor = "red";
-                    document.getElementById("key-steno-" + e.key).style.backgroundColor = "red";
-                    key.push(e.key)
-                }
-            }
-        }
-
-
-        function millisToMinutesAndSeconds(millis) {
-            var minutes = Math.floor(millis / 60000);
-            var seconds = ((millis % 60000) / 1000).toFixed(0);
-            return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
-        }
-
-        function reset(e) {
-            time = 60000;
-        }
-        let stringDemo = "Đỗ Tiến Thành đẹp trai vô địch"
-
+        let stringDemo = "Bạn thân ơi duyên số sinh ra đĩa lòng"
         let textList = stringDemo.split(" ");
         let i = 0;
         for (i = 0; i < textList.length; i++) {

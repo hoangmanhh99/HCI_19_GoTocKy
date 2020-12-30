@@ -27,7 +27,7 @@
     position: absolute;
     top: 68.5%;
     left: 40%;
-    transform: translate(-50%, -50%) scale(0.4);
+    transform: translate(-50%, -50%) scale(0.45);
     background-color:#c8ded9;
     border-radius: 10px;
     display: grid;
